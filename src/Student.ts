@@ -1,4 +1,4 @@
-import User from "./User";
+import { User } from "./User";
 import moment from "moment";
 
 export class Student implements User {

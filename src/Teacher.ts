@@ -1,4 +1,4 @@
-import User from "./User";
+import { User } from "./User";
 
 enum TEACHER_SKILLS {
   REACT = "REACT",

@@ -1,46 +1,48 @@
-import * as moment from 'moment'
+import * as moment from "moment";
+import { Teacher } from "./Teacher";
+import { Student } from "./Student";
 
 export abstract class Mission {
-    private name: string = ""
+  private name: string = "";
 
-    constructor(
-        private id: string,
-        private startDate: moment.Moment,
-        private endDate: moment.Moment,
-        private teachers: string[] = [],
-        private students: string[] = [],
-        private currentModule?: number | undefined
-    ) {}
+  constructor(
+    private id: string,
+    private startDate: moment.Moment,
+    private endDate: moment.Moment,
+    private teachers: Teacher[] = [],
+    private students: Student[] = [],
+    private currentModule?: number | undefined
+  ) {}
 
-    public getId(): string {
-        return this.id
-    }
+  public getId(): string {
+    return this.id;
+  }
 
-    public getName(): string {
-        return this.name
-    }
+  public getName(): string {
+    return this.name;
+  }
 
-    public getStartDate(): moment.Moment {
-        return this.startDate
-    }
+  public getStartDate(): moment.Moment {
+    return this.startDate;
+  }
 
-    public getEndDate(): moment.Moment {
-        return this.endDate
-    }
+  public getEndDate(): moment.Moment {
+    return this.endDate;
+  }
 
-    public getCurrentModule(): number | undefined {
-        return this.currentModule
-    }
+  public getCurrentModule(): number | undefined {
+    return this.currentModule;
+  }
 
-    public addTeacher(teacher: string) {
-        this.teachers.push(teacher)
-    }
+  public addTeacher(teacher: Teacher) {
+    this.teachers.push(teacher);
+  }
 
-    public addStudent(student: string) {
-        this.students.push(student)
-    }
+  public addStudent(student: Student) {
+    this.students.push(student);
+  }
 
-    public setName(name: string) {
-        this.name = name
-    }
+  public setName(name: string) {
+    this.name = name;
+  }
 }
