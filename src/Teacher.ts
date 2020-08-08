@@ -1,6 +1,6 @@
 import { User } from "./User";
 
-enum TEACHER_SKILLS {
+export enum TEACHER_SKILLS {
   REACT = "REACT",
   REDUX = "REDUX",
   CSS = "CSS",
