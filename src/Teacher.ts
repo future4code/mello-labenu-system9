@@ -12,7 +12,7 @@ export enum TEACHER_SKILLS {
 
 export class Teacher implements User {
   constructor(
-    public id: string,
+    public id: number,
     public name: string,
     public email: string,
     public skills: TEACHER_SKILLS[]
