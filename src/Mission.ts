@@ -34,12 +34,18 @@ export abstract class Mission {
     return this.currentModule;
   }
 
+  public getStudents(): Student[] {
+    return this.students;
+  }
+
   public addTeacher(teacher: Teacher) {
     this.teachers.push(teacher);
+    console.log("Professor Adicionado");
   }
 
   public addStudent(student: Student) {
     this.students.push(student);
+    console.log("Estudante Adicionado");
   }
 
   public setName(name: string) {
